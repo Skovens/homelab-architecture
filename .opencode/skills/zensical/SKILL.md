@@ -135,13 +135,17 @@ Priority order (highest first):
 
 ## Navigation
 
-Define in `zensical.toml` under `[nav]`. Sections use `index.md` files:
+Define in `zensical.toml` under `[project]` as a TOML array of inline tables. Sections nest arrays inside:
 
 ```toml
-[nav]
-- Home = "index.md"
-- Section = "section/index.md"
-  - Page = "section/page.md"
+[project]
+nav = [
+  { "Home" = "index.md" },
+  { "Section" = [
+    "section/index.md",
+    { "Page" = "section/page.md" },
+  ] },
+]
 ```
 
 Without `nav`, Zensical auto-generates from file structure alphabetically.
@@ -159,7 +163,7 @@ description: Page description for SEO
 
 ## Gotchas
 
-- **TOML not YAML**: `zensical.toml` uses TOML syntax. Arrays use `["item"]`, not `- item`.
+- **TOML not YAML**: `zensical.toml` uses TOML syntax. Nav uses `{ "Key" = "value" }` arrays, not `- Key: value`.
 - **4-space indent**: Admonition and tab content needs 4 spaces, not 2.
 - **`===` not tabs**: Content tabs use `=== "Name"` syntax, not markdown tab extensions.
 - **No `README.md` + `index.md` coexistence**: If both exist in a directory, behavior is undefined. Use one or the other.
@@ -190,11 +194,11 @@ jobs:
         with:
           python-version: '3.x'
       - run: pip install zensical
-      - run: zensical build --output gh-pages
+      - run: zensical build
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./gh-pages
+          publish_dir: ./site
 ```
 
 ## Local Preview
