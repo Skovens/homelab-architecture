@@ -1,0 +1,107 @@
+/*
+ * Solarized color scheme for Material for MkDocs
+ * Based on Ethan Schoonover's Solarized palette
+ *
+ * Dark mode (scheme: slate)
+ * Light mode (scheme: default)
+ * Primary accent: cyan (#2aa198)
+ * Secondary accent: orange (#cb4b16)
+ */
+
+/* Dark scheme - Solarized Dark */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color:        #073642;
+  --md-primary-fg-color--light: #586e75;
+  --md-primary-fg-color--dark:  #002b36;
+  --md-primary-bg-color:        #002b36;
+  --md-primary-bg-color--light: #073642;
+
+  --md-accent-fg-color:         #2aa198;
+  --md-accent-fg-color--transparent: rgba(42, 161, 152, 0.1);
+  --md-accent-bg-color:         #002b36;
+
+  --md-default-fg-color:        #839496;
+  --md-default-fg-color--light: #93a1a1;
+  --md-default-fg-color--lighter: #657b83;
+  --md-default-fg-color--lightest: #586e75;
+  --md-default-bg-color:        #002b36;
+  --md-default-bg-color--light: #073642;
+
+  --md-typeset-color:           #839496;
+
+  --md-hue: 190;
+}
+
+/* Light scheme - Solarized Light */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color:        #eee8d5;
+  --md-primary-fg-color--light: #fdf6e3;
+  --md-primary-fg-color--dark:  #ddd6c1;
+  --md-primary-bg-color:        #fdf6e3;
+  --md-primary-bg-color--light: #eee8d5;
+
+  --md-accent-fg-color:         #2aa198;
+  --md-accent-fg-color--transparent: rgba(42, 161, 152, 0.1);
+  --md-accent-bg-color:         #fdf6e3;
+
+  --md-default-fg-color:        #073642;
+  --md-default-fg-color--light: #586e75;
+  --md-default-fg-color--lighter: #93a1a1;
+  --md-default-fg-color--lightest: #eee8d5;
+  --md-default-bg-color:        #fdf6e3;
+  --md-default-bg-color--light: #eee8d5;
+
+  --md-typeset-color:           #073642;
+
+  --md-hue: 45;
+}
+
+/* Sidebar and nav tweaks */
+[data-md-color-scheme="slate"] .md-nav__link {
+  color: #839496;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link:hover {
+  color: #2aa198;
+}
+
+[data-md-color-scheme="slate"] .md-nav__link--active {
+  color: #2aa198;
+}
+
+[data-md-color-scheme="slate"] .md-header {
+  background-color: #073642;
+}
+
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: #073642;
+}
+
+/* Code blocks - Solarized dark bg for dark mode */
+[data-md-color-scheme="slate"] .highlight code,
+[data-md-color-scheme="slate"] .highlighttable {
+  background-color: #073642;
+}
+
+/* Code blocks - Solarized light bg for light mode */
+[data-md-color-scheme="default"] .highlight code,
+[data-md-color-scheme="default"] .highlighttable {
+  background-color: #eee8d5;
+}
+
+/* Admonition borders - use cyan accent */
+.md-typeset .admonition,
+.md-typeset details {
+  border-color: #2aa198;
+}
+
+/* Selection color */
+[data-md-color-scheme="slate"] ::selection {
+  background: rgba(42, 161, 152, 0.3);
+  color: #fdf6e3;
+}
+
+[data-md-color-scheme="default"] ::selection {
+  background: rgba(42, 161, 152, 0.3);
+  color: #002b36;
+}
