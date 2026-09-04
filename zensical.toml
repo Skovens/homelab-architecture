@@ -1,0 +1,79 @@
+[project]
+site_name = "Homelab Architecture"
+site_url = "https://skovens.github.io/homelab-architecture/"
+repo_url = "https://github.com/Skovens/homelab-architecture"
+repo_name = "Skovens/homelab-architecture"
+
+[theme]
+name = "material"
+features = [
+  "content.code.copy",
+  "content.code.select",
+  "navigation.instant",
+  "navigation.tabs",
+  "navigation.sections",
+  "navigation.top",
+  "search.suggest",
+  "search.highlight",
+]
+
+[project.markdown_extensions]
+admonition = {}
+pymdownx.details = {}
+pymdownx.superfences = {}
+pymdownx.highlight.anchor_linenums = true
+pymdownx.highlight.line_spans = "__span"
+pymdownx.highlight.pygments_lang_class = true
+pymdownx.inlinehilite = {}
+pymdownx.snippets = {}
+pymdownx.tabbed.alternate_style = true
+
+[nav]
+- Home = "index.md"
+- Philosophy = "philosophy.md"
+- Containerization = "containerization/index.md"
+  - Podman over Docker = "containerization/podman-over-docker.md"
+  - Quadlets = "containerization/quadlets.md"
+  - Per-Service Users = "containerization/per-service-users.md"
+  - The AI Services Pod = "containerization/the-ai-services-pod.md"
+  - Egress Gate = "containerization/egress-gate.md"
+- Storage = "storage/index.md"
+  - ZFS Datasets = "storage/zfs-datasets.md"
+  - Snapshots with Sanoid = "storage/snapshots-sanoid.md"
+  - Replication with Syncoid = "storage/replication-syncoid.md"
+  - Cloud Backup = "storage/cloud-backup.md"
+- Networking = "networking/index.md"
+  - Mesh VPN = "networking/mesh-vpn.md"
+  - Firewalls = "networking/firewall-ufw-pf.md"
+  - Reverse Proxy = "networking/reverse-proxy.md"
+- AI Stack = "ai-stack/index.md"
+  - GPU = "ai-stack/gpu.md"
+  - Inference Servers = "ai-stack/inference-servers.md"
+  - Model Proxy = "ai-stack/model-proxy.md"
+  - Open WebUI = "ai-stack/open-webui.md"
+  - Document Processing = "ai-stack/document-processing.md"
+  - MCP Servers = "ai-stack/mcp-servers.md"
+  - Knowledge Base = "ai-stack/knowledge-base.md"
+- Services = "services/index.md"
+  - Forgejo = "services/forgejo.md"
+  - Healthchecks = "services/healthchecks.md"
+  - NFS = "services/nfs.md"
+  - Toggleable Services = "services/toggleable-services.md"
+- Backup & DR = "backup-disaster-recovery/index.md"
+  - Three-Layer Strategy = "backup-disaster-recovery/three-layer-strategy.md"
+  - DR Host = "backup-disaster-recovery/dr-host.md"
+- Infrastructure as Code = "infrastructure-as-code/index.md"
+  - Ansible Patterns = "infrastructure-as-code/ansible-patterns.md"
+  - Secrets Management = "infrastructure-as-code/secrets-management.md"
+  - Pre-commit & Linting = "infrastructure-as-code/pre-commit-linting.md"
+- Decisions = "decisions/index.md"
+  - ADR-0001: Rootless Users = "decisions/0001-rootless-per-service-users.md"
+  - ADR-0002: --machine= Management = "decisions/0002-user-scoped-systemd-machine.md"
+  - ADR-0003: AI Services Pod = "decisions/0003-ai-services-pod.md"
+  - ADR-0004: Podman Secrets = "decisions/0004-podman-secrets.md"
+  - ADR-0005: Timezone Pass-Through = "decisions/0005-timezone-pass-through.md"
+  - ADR-0006: Docling Filter = "decisions/0006-oikb-docling-filter.md"
+  - ADR-0007: Docling Timeout = "decisions/0007-docling-sync-timeout.md"
+  - ADR-0008: NVIDIA R580 = "decisions/0008-nvidia-r580-run-installer.md"
+  - ADR-0010: Fixed Context Sizes = "decisions/0010-fixed-context-sizes-replace-fit.md"
+  - ADR-0011: Egress Gate = "decisions/0011-egress-gate-for-rootless-containers.md"
