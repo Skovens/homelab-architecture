@@ -46,3 +46,4 @@ Each section follows the same pattern:
 3. **Why** this way, not the obvious alternative
 
 Code samples are concrete but redacted — real config patterns, sanitized paths and domains. The [Decisions](decisions/index.md) section contains architecture decision records explaining the reasoning behind each major choice.
+
