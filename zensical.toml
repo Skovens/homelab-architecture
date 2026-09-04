@@ -3,6 +3,7 @@ site_name = "Homelab Architecture"
 site_url = "https://skovens.github.io/homelab-architecture/"
 repo_url = "https://github.com/Skovens/homelab-architecture"
 repo_name = "Skovens/homelab-architecture"
+extra_css = ["stylesheets/extra.css"]
 nav = [
   { "Home" = "index.md" },
   { "Philosophy" = "philosophy.md" },
@@ -82,6 +83,23 @@ features = [
   "search.suggest",
   "search.highlight",
 ]
+
+# Dark mode (Solarized Dark) — default for OS dark preference
+[[project.theme.palette]]
+media = "(prefers-color-scheme: dark)"
+scheme = "slate"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/moon"
+toggle.name = "Switch to light mode"
+
+# Light mode (Solarized Light)
+[[project.theme.palette]]
+scheme = "default"
+primary = "custom"
+accent = "custom"
+toggle.icon = "lucide/sun"
+toggle.name = "Switch to dark mode"
 
 [project.markdown_extensions]
 admonition = {}
