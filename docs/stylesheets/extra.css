@@ -29,6 +29,9 @@
 
   --md-typeset-color:           #839496;
 
+  /* Links - Solarized blue, high contrast on the dark bg */
+  --md-typeset-a-color:         #268bd2;
+
   --md-hue: 190;
 }
 
@@ -52,6 +55,9 @@
   --md-default-bg-color--light: #eee8d5;
 
   --md-typeset-color:           #073642;
+
+  /* Links - Solarized blue, distinct on the light bg */
+  --md-typeset-a-color:         #268bd2;
 
   --md-hue: 45;
 }
