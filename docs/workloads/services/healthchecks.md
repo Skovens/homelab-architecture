@@ -19,7 +19,7 @@ Every critical service (databases, web servers, backups) is configured to send a
 0 2 * * * curl -fsS --retry 3 https://hc-ping.com/your-uuid-here > /dev/null
 ```
 
-The status of these pings is monitored via the Healthchecks.io dashboard. To ensure the monitoring pipeline itself is functional, I perform regular manual checks via my phone, verifying that the dashboard reflects the real-time state of the lab.
+The status of these pings is monitored via the Healthchecks.io dashboard. To ensure the monitoring pipeline itself is functional, my phone is configured to automatically check the status of these services at regular intervals.
 
 ## Why
 
@@ -28,5 +28,5 @@ The "active verification" model is more resilient than passive probing. With pas
 This means:
 1. **Zero Inbound Requirement:** Services don't need open incoming ports for monitoring.
 2. **Network Resilience:** If the monitoring server is temporarily unreachable, the service can retry.
-3. **Closing the Loop:** By checking the dashboard via my phone, I am not just assuming the alerting pipeline works—I am actively verifying that the entire monitoring loop (Service $\rightarrow$ Healthchecks $\rightarrow$ Dashboard $\rightarrow$ User) is intact.
+3. **Closing the Loop:** By having my phone automatically verify the dashboard status, I am not just assuming the alerting pipeline works—I am actively verifying that the entire monitoring loop (Service $\rightarrow$ Healthchecks $\rightarrow$ Dashboard $\rightarrow$ Mobile Alerting) is intact.
 

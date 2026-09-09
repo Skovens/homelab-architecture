@@ -4,8 +4,6 @@ title: Knowledge Base
 
 # Knowledge Base
 
-## What
-
 oikb syncs external sources into Open WebUI Knowledge Bases for RAG (Retrieval-Augmented Generation). Currently it syncs the Obsidian vault.
 
 ## How

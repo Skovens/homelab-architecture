@@ -4,11 +4,7 @@ title: Pre-commit & Linting
 
 # Pre-commit & Linting
 
-## What
-
 Pre-commit hooks enforce code quality before every commit. Linting catches errors before they reach the server.
-
-## How
 
 ### Pre-commit Hooks
 
@@ -28,7 +24,7 @@ repos:
 
 ### Template Linting
 
-A custom script validates Jinja2 templates:
+A custom script validates Jinj2 templates:
 
 ```bash title="scripts/lint-templates.py"
 # Renders every .j2 template, then runs bash -n on the output

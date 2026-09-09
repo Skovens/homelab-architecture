@@ -4,8 +4,6 @@ title: Document Processing
 
 # Document Processing
 
-## What
-
 Docling-serve converts documents (PDFs, images, text files) into structured data for Open WebUI's RAG pipeline. It runs as a CPU-only container.
 
 ## How

@@ -4,8 +4,6 @@ title: NFS
 
 # NFS
 
-## What
-
 NFS exports media storage from the home server to VPN clients. Restricted to the mesh subnet.
 
 ## How

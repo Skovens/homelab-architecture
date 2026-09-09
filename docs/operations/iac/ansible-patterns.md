@@ -4,11 +4,7 @@ title: Ansible Patterns
 
 # Ansible Patterns
 
-## What
-
-The Ansible repo follows consistent patterns across all 41 roles: shared base role, tag-based organization, feature flags, and group_vars for overrides.
-
-## How
+The Ansible repo follows consistent patterns across all roles: shared base roles, tag-based organization, feature flags, and hierarchical `group_vars`.
 
 ### Role Structure
 
@@ -63,3 +59,4 @@ Configuration is layered:
 Role defaults in `roles/<role>/defaults/main.yml` provide the base values. Group_vars override per host.
 
 The rationale for a unified, declarative approach to service deployment is covered in the [Orchestration Model](../../principles/orchestration-model.md).
+

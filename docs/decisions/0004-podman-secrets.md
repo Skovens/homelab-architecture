@@ -26,7 +26,6 @@ Store all service credentials as **Podman secrets** and inject them via quadlet 
 
 - **Positive:** No plaintext secrets on disk or in git; per-service isolation; rotation = recreate the secret + restart.
 - **Negative:** Every secret adds a deploy-time generation task; `podman secret` lifecycle must be understood (secrets are deleted with the container unless the store is shared); not all images support secret injection — some still need env files.
-- **Migration debt:** remaining `lookup()`/`.env` usages in roles should be audited and moved to Podman secrets.
 
 ## Related
 

@@ -4,8 +4,6 @@ title: Forgejo
 
 # Forgejo
 
-## What
-
 Forgejo is my self-hosted git forge. It hosts the Obsidian vault repository and any private code that doesn't belong on GitHub.
 
 ## How

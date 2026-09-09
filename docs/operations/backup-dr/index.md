@@ -4,7 +4,29 @@ title: Backup & Disaster Recovery
 
 # Backup & Disaster Recovery
 
-Three layers of backup, one philosophy: never lose data.
+Data integrity is non-negotiable. This section outlines the multi-layered strategy used to protect the homelab against everything from accidental `rm -rf` to total site-wide failure.
 
-- [Three-Layer Strategy](three-layer-strategy.md) — snapshots, replication, cloud
-- [DR Host](dr-host.md) — FreeBSD on ARM, the recovery target
+## The Strategy
+
+We follow a tiered approach to redundancy, moving from high-frequency, low-latency protection to low-frequency, high-latency catastrophic recovery.
+
+```mermaid
+graph TD
+    subgraph "Site A (Home)"
+        A[Primary Services] -->|ZFS Snapshots| B[Local Storage]
+    end
+
+    subgraph "Site B (Remote)"
+        B -->|Syncoid Replication| C[DR Host - FreeBSD]
+    end
+
+    subgraph "Site C (Cloud)"
+        C -->|Rclone Sync| D[pCloud]
+        B -->|Rclone Sync| D
+    end
+```
+
+## Core Components
+
+- [Three-Layer Strategy](three-layer-strategy.md) — The philosophy of tiered redundancy.
+- [DR Host](dr-host.md) — Details on the FreeBSD-based recovery target and its role in the replication loop.

@@ -4,8 +4,6 @@ title: MCP Servers
 
 # MCP Servers
 
-## What
-
 Three MCP (Model Context Protocol) servers give Open WebUI's AI agents access to external tools: GitHub, Forgejo (self-hosted git), and an Obsidian vault.
 
 ## How
