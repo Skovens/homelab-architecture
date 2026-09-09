@@ -4,8 +4,6 @@ title: ZFS Datasets
 
 # ZFS Datasets
 
-## What
-
 Every service with persistent data gets its own ZFS dataset. Datasets are tuned to their workload profile — databases get small record sizes, media gets large ones.
 
 ## How
@@ -39,3 +37,4 @@ ZFS datasets provide:
 - **Send/receive granularity** — replicate individual datasets, not entire pools
 
 Without per-service datasets, a single `bulkdata/podman` dataset means all services share the same recordsize and compression settings. A database container and a media server would get the same I/O tuning — which is optimal for neither.
+

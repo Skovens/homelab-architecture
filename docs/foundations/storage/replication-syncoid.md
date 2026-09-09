@@ -4,8 +4,6 @@ title: Replication with Syncoid
 
 # Replication with Syncoid
 
-## What
-
 Syncoid handles ZFS replication over SSH. I use it for disaster recovery — the DR host pulls snapshots from the home server every 2 hours.
 
 ## How

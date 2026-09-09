@@ -4,8 +4,6 @@ title: Egress Gate
 
 # Egress Gate
 
-## What
-
 Rootless Podman's default network mode (pasta) snapshots the host's network configuration at container start and never refreshes it. On a fresh boot, this means containers can start before the network is ready — and they stay broken until restarted.
 
 ## How
@@ -35,3 +33,4 @@ This workaround was introduced after repeated boot-order race conditions where p
 
 !!! warning "Pasta doesn't refresh"
     Pasta's `--config-net` snapshots host networking at start and never updates it. If the network changes after the container starts (e.g., DNS becomes available, default route appears), the container never sees it. This is by design in pasta — it's a feature for network isolation, but a problem for boot sequences.
+

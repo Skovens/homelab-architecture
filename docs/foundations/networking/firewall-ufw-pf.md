@@ -22,6 +22,20 @@ firewall_incoming:
 firewall_outgoing: allow
 ```
 
+## How
+
+### Debian (Home Server + Proxy) — UFW
+
+```yaml
+firewall_default: deny
+firewall_incoming:
+  - { port: 22, proto: tcp }     # SSH
+  - { port: 8090, proto: tcp }   # llama.cpp GPU
+  - { port: 8091, proto: tcp }   # llama.cpp CPU
+  # ... additional service ports
+firewall_outgoing: allow
+```
+
 ### FreeBSD (DR Host) — PF
 
 PF rules are deployed via Jinja2 template and validated with `pfctl -nf` before activation:
@@ -38,6 +52,8 @@ Enabled in `rc.conf`:
 pf_enable="YES"
 pf_rules="/etc/pf.conf"
 ```
+
+To ensure no stale rules persist, the Ansible play always enforces the desired state. It compares the current active firewall configuration against the intended template; if they do not match, it wipes the existing rules and reapplies the new configuration from scratch.
 
 ## Why
 

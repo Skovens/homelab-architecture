@@ -4,8 +4,6 @@ title: Open WebUI
 
 # Open WebUI
 
-## What
-
 Open WebUI is the frontend for all AI services. It connects to both llama.cpp instances, docling-serve for document processing, SearXNG for search, and multiple MCP servers for tool use.
 
 ## How
@@ -35,3 +33,7 @@ Tool servers are configured via `open_webui_tool_servers`:
 
 !!! note "Ordering constraint"
     Open Terminal must run before Open WebUI in the playbook. Open Terminal creates an API key secret that Open WebUI reads at startup. If Open WebUI starts first, the secret doesn't exist yet.
+
+!!! tip "Secrets Management"
+    The Ansible play does not contain any secrets. If a required secret is missing, the play will pause and prompt for it, providing precise instructions on how to obtain it. This ensures that even months later, the process for generating and providing secrets remains clear and repeatable.
+

@@ -33,8 +33,12 @@ I gravitate toward tools that do one thing well and integrate with the system
 natively. Podman over Docker. Quadlets over Compose. Sanoid over a hand-rolled
 backup script.
 
-The same thinking applies to monitoring. I use healthchecks.io rather than a
-full metrics stack. The key difference is active verification: my phone checks
-in on each service and confirms it actually works, rather than assuming an
-alerting pipeline is functional. I don't want a set-and-forget system — I want
-continuous proof that things are running.
+## Active Verification
+
+The same philosophy of intentionality applies to monitoring. I use healthchecks.io
+rather than a full metrics stack. The key difference is active verification: my
+phone checks in on each service and confirms it actually works, rather than
+assuming an alerting pipeline is functional and will notify me when something
+goes wrong. I don't want a set-and-forget system — I want continuous proof that
+things are running.
+

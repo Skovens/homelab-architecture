@@ -4,8 +4,6 @@ title: Inference Servers
 
 # Inference Servers
 
-## What
-
 llama.cpp runs twice — once on GPU for fast inference, once on CPU for a dense 256K-context model that doesn't fit in VRAM. Both run as rootless containers in the AI services pod.
 
 ## How

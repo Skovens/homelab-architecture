@@ -2,9 +2,11 @@
 title: Model Proxy
 ---
 
-# Model Proxy
+---
+title: Model Proxy
+---
 
-## What
+# Model Proxy
 
 llama-swap sits in front of the llama.cpp instances and manages model switching. It prevents aborted in-flight streaming responses when Open WebUI switches models.
 
