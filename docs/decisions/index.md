@@ -18,3 +18,5 @@ ADRs document the reasoning behind major architectural choices. Each record capt
 | [ADR-0008](0008-nvidia-r580-run-installer.md) | NVIDIA R580 via `.run` installer + APT pinning | Accepted |
 | [ADR-0010](0010-fixed-context-sizes-replace-fit.md) | Fixed context sizes replace `--fit` auto-fitting | Accepted |
 | [ADR-0011](0011-egress-gate-for-rootless-containers.md) | Egress gate for rootless containers | Accepted |
+| [ADR-0012](0012-podman-for-rootless-containers.md) | Podman for rootless containers | Accepted |
+| [ADR-0013](0013-quadlets-over-docker-compose.md) | Quadlets over Docker Compose | Accepted |

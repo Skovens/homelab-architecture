@@ -5,55 +5,65 @@ repo_url = "https://github.com/Skovens/homelab-architecture"
 repo_name = "Skovens/homelab-architecture"
 nav = [
   { "Home" = "index.md" },
-  { "Philosophy" = "philosophy.md" },
-  { "Containerization" = [
-    "containerization/index.md",
-    { "Podman over Docker" = "containerization/podman-over-docker.md" },
-    { "Quadlets" = "containerization/quadlets.md" },
-    { "Per-Service Users" = "containerization/per-service-users.md" },
-    { "The AI Services Pod" = "containerization/the-ai-services-pod.md" },
-    { "Egress Gate" = "containerization/egress-gate.md" },
+  { "Philosophy" = [
+    "principles/philosophy.md",
+    { "Security Model" = "principles/security-model.md" },
+    { "Orchestration Model" = "principles/orchestration-model.md" },
   ] },
-  { "Storage" = [
-    "storage/index.md",
-    { "ZFS Datasets" = "storage/zfs-datasets.md" },
-    { "Snapshots with Sanoid" = "storage/snapshots-sanoid.md" },
-    { "Replication with Syncoid" = "storage/replication-syncoid.md" },
-    { "Cloud Backup" = "storage/cloud-backup.md" },
+  { "Workloads" = [
+    { "Containerization" = [
+      "workloads/containerization/index.md",
+      { "Podman for Rootless Containers" = "workloads/containerization/podman-over-docker.md" },
+      { "Quadlets" = "workloads/containerization/quadlets.md" },
+      { "Per-Service Users" = "workloads/containerization/per-service-users.md" },
+      { "Egress Gate" = "workloads/containerization/egress-gate.md" },
+    ] },
+    { "AI Stack" = [
+      "workloads/ai-stack/index.md",
+      { "The AI Services Pod" = "workloads/ai-stack/the-ai-services-pod.md" },
+      { "GPU" = "workloads/ai-stack/gpu.md" },
+      { "Inference Servers" = "workloads/ai-stack/inference-servers.md" },
+      { "Model Proxy" = "workloads/ai-stack/model-proxy.md" },
+      { "Open WebUI" = "workloads/ai-stack/open-webui.md" },
+      { "Document Processing" = "workloads/ai-stack/document-processing.md" },
+      { "MCP Servers" = "workloads/ai-stack/mcp-servers.md" },
+      { "Knowledge Base" = "workloads/ai-stack/knowledge-base.md" },
+    ] },
+    { "Services" = [
+      "workloads/services/index.md",
+      { "Forgejo" = "workloads/services/forgejo.md" },
+      { "Healthchecks" = "workloads/services/healthchecks.md" },
+      { "NFS" = "workloads/services/nfs.md" },
+      { "Toggleable Services" = "workloads/services/toggleable-services.md" },
+    ] },
   ] },
-  { "Networking" = [
-    "networking/index.md",
-    { "Mesh VPN" = "networking/mesh-vpn.md" },
-    { "Firewalls" = "networking/firewall-ufw-pf.md" },
-    { "Reverse Proxy" = "networking/reverse-proxy.md" },
+  { "Foundations" = [
+    { "Networking" = [
+      "foundations/networking/index.md",
+      { "Mesh VPN" = "foundations/networking/mesh-vpn.md" },
+      { "Firewalls" = "foundations/networking/firewall-ufw-pf.md" },
+      { "Reverse Proxy" = "foundations/networking/reverse-proxy.md" },
+    ] },
+    { "Storage" = [
+      "foundations/storage/index.md",
+      { "ZFS Datasets" = "foundations/storage/zfs-datasets.md" },
+      { "Snapshots with Sanoid" = "foundations/storage/snapshots-sanoid.md" },
+      { "Replication with Syncoid" = "foundations/storage/replication-syncoid.md" },
+      { "Cloud Backup" = "foundations/storage/cloud-backup.md" },
+    ] },
   ] },
-  { "AI Stack" = [
-    "ai-stack/index.md",
-    { "GPU" = "ai-stack/gpu.md" },
-    { "Inference Servers" = "ai-stack/inference-servers.md" },
-    { "Model Proxy" = "ai-stack/model-proxy.md" },
-    { "Open WebUI" = "ai-stack/open-webui.md" },
-    { "Document Processing" = "ai-stack/document-processing.md" },
-    { "MCP Servers" = "ai-stack/mcp-servers.md" },
-    { "Knowledge Base" = "ai-stack/knowledge-base.md" },
-  ] },
-  { "Services" = [
-    "services/index.md",
-    { "Forgejo" = "services/forgejo.md" },
-    { "Healthchecks" = "services/healthchecks.md" },
-    { "NFS" = "services/nfs.md" },
-    { "Toggleable Services" = "services/toggleable-services.md" },
-  ] },
-  { "Backup & DR" = [
-    "backup-disaster-recovery/index.md",
-    { "Three-Layer Strategy" = "backup-disaster-recovery/three-layer-strategy.md" },
-    { "DR Host" = "backup-disaster-recovery/dr-host.md" },
-  ] },
-  { "Infrastructure as Code" = [
-    "infrastructure-as-code/index.md",
-    { "Ansible Patterns" = "infrastructure-as-code/ansible-patterns.md" },
-    { "Secrets Management" = "infrastructure-as-code/secrets-management.md" },
-    { "Pre-commit & Linting" = "infrastructure-as-code/pre-commit-linting.md" },
+  { "Operations" = [
+    { "Infrastructure as Code" = [
+      "operations/iac/index.md",
+      { "Ansible Patterns" = "operations/iac/ansible-patterns.md" },
+      { "Secrets Management" = "operations/iac/secrets-management.md" },
+      { "Pre-commit & Linting" = "operations/iac/pre-commit-linting.md" },
+    ] },
+    { "Backup & DR" = [
+      "operations/backup-dr/index.md",
+      { "Three-Layer Strategy" = "operations/backup-dr/three-layer-strategy.md" },
+      { "DR Host" = "operations/backup-dr/dr-host.md" },
+    ] },
   ] },
   { "Decisions" = [
     "decisions/index.md",
@@ -67,6 +77,8 @@ nav = [
     { "ADR-0008: NVIDIA R580" = "decisions/0008-nvidia-r580-run-installer.md" },
     { "ADR-0010: Fixed Context Sizes" = "decisions/0010-fixed-context-sizes-replace-fit.md" },
     { "ADR-0011: Egress Gate" = "decisions/0011-egress-gate-for-rootless-containers.md" },
+    { "ADR-0012: Podman Rootless" = "decisions/0012-podman-for-rootless-containers.md" },
+    { "ADR-0013: Quadlets" = "decisions/0013-quadlets-over-docker-compose.md" },
   ] },
 ]
 

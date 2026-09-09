@@ -4,11 +4,13 @@ title: Homelab Architecture
 
 # Homelab Architecture
 
-I run a homelab. Not just services on a server — an architecture. Every technology choice, every configuration, every deployment pattern is intentional. This site documents what I built, how I built it, and most importantly, why.
+This site documents my homelab—an evolving environment where I explore infrastructure design and system patterns. Rather than just running services, I use this space to experiment with intentional architecture, documenting not just what I build, but the reasoning behind every configuration and deployment.
 
 ## Why This Exists
 
-I transitioned from industrial automation to infrastructure engineering. The homelab is where I practice, experiment, and prove that I can design, deploy, and maintain production-grade systems. This site is both a portfolio and a reference — showing my thinking, not just my configs.
+My journey from industrial automation to infrastructure engineering has made me a lifelong student of how systems work. I view this homelab as a personal laboratory: a safe place to practice production-grade patterns, test new technologies, and learn from both successes and failures.
+
+I'm sharing this site as a living journal of my technical journey. It is part personal reference and part resource for anyone else interested in the "why" behind the "how."
 
 ## Hardware
 
@@ -39,11 +41,12 @@ I transitioned from industrial automation to infrastructure engineering. The hom
 
 ## How to Read This Site
 
-Each section follows the same pattern:
+The site is organised into four layers:
 
-1. **What** I'm solving
-2. **How** I implemented it
-3. **Why** this way, not the obvious alternative
+1. **Principles** — the [philosophy](principles/philosophy.md) and the reasoning behind the security and orchestration choices.
+2. **Foundations & Workloads** — how the pieces are built and run: networking, storage, containerization, AI services, and the other services.
+3. **Operations** — how the environment is maintained, automated, and recovered.
+4. **Decisions** — deep dives into specific technical trade-offs in the [Architecture Decision Records](decisions/index.md).
 
-Code samples are concrete but redacted — real config patterns, sanitized paths and domains. The [Decisions](decisions/index.md) section contains architecture decision records explaining the reasoning behind each major choice.
+Code samples are real-world patterns, though paths and sensitive domains are sanitized. Where a page makes a choice, it links to the principle or decision record that explains why — so the reasoning is never repeated and never lost.
 
