@@ -26,7 +26,6 @@ Containers join the pod and communicate over localhost:
 [Container]
 Pod=ai-services.pod
 Image=ghcr.io/ggml-org/llama.cpp:server-cuda12
-PublishPort=8090:8080
 ```
 
 Service discovery uses localhost with different ports:
@@ -34,12 +33,19 @@ Service discovery uses localhost with different ports:
 | Service | Internal Address |
 |---------|-----------------|
 | Open WebUI | `localhost:3000` |
-| llama.cpp (GPU) | `localhost:8090` |
-| llama.cpp (CPU) | `localhost:8091` |
+| llama-swap (proxy) | `localhost:8092` |
+| llama.cpp (GPU) | `localhost:8090` *internal only* |
+| llama.cpp (CPU) | `localhost:8091` *internal only* |
 | SearXNG | `localhost:8888` |
 | Docling-serve | `localhost:5001` |
+| oikb | `localhost:8084` |
 | GitHub MCP | `localhost:8082` |
 | Forgejo MCP | `localhost:8085` |
+| Vault MCP | `localhost:8015` |
+| openai-edge-tts | `localhost:5050` |
+
+!!! note "llama.cpp ports are internal only"
+    Direct llama.cpp ports (8090/8091) are not published to the host. All external LLM traffic routes through llama-swap on port 8092, which proxies to the appropriate llama.cpp instance via pod-internal networking.
 
 Containers declare systemd dependencies to avoid race conditions:
 

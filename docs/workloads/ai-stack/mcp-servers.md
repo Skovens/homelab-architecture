@@ -20,7 +20,7 @@ Runs the native Forgejo MCP server with Streamable HTTP transport — no mcpo wr
 
 Forgejo PAT stored as a Podman secret.
 
-### Vault MCP (port 8095)
+### Vault MCP (port 8015)
 
 A custom build wrapping `@modelcontextprotocol/server-filesystem` + `supergateway` (stdio-to-HTTP). Mounts the Obsidian vault at `/vault` and exposes 8 MCP tools (read, write, edit, search).
 
