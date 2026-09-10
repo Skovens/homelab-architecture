@@ -4,112 +4,115 @@
         <loc>https://skovens.github.io/homelab-architecture/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/philosophy/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/principles/philosophy/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/containerization/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/principles/security-model/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/containerization/podman-over-docker/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/principles/orchestration-model/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/containerization/quadlets/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/workloads/containerization/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/containerization/per-service-users/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/workloads/containerization/podman-over-docker/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/containerization/the-ai-services-pod/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/workloads/containerization/quadlets/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/containerization/egress-gate/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/workloads/containerization/per-service-users/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/storage/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/workloads/containerization/egress-gate/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/storage/zfs-datasets/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/workloads/ai-stack/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/storage/snapshots-sanoid/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/workloads/ai-stack/the-ai-services-pod/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/storage/replication-syncoid/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/workloads/ai-stack/gpu/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/storage/cloud-backup/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/workloads/ai-stack/inference-servers/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/networking/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/workloads/ai-stack/model-proxy/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/networking/mesh-vpn/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/workloads/ai-stack/open-webui/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/networking/firewall-ufw-pf/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/workloads/ai-stack/document-processing/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/networking/reverse-proxy/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/workloads/ai-stack/mcp-servers/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/ai-stack/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/workloads/ai-stack/knowledge-base/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/ai-stack/gpu/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/workloads/services/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/ai-stack/inference-servers/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/workloads/services/forgejo/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/ai-stack/model-proxy/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/workloads/services/healthchecks/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/ai-stack/open-webui/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/workloads/services/nfs/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/ai-stack/document-processing/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/foundations/networking/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/ai-stack/mcp-servers/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/foundations/networking/mesh-vpn/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/ai-stack/knowledge-base/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/foundations/networking/firewall-ufw-pf/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/services/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/foundations/networking/reverse-proxy/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/services/forgejo/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/foundations/storage/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/services/healthchecks/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/foundations/storage/zfs-datasets/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/services/nfs/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/foundations/storage/snapshots-sanoid/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/services/toggleable-services/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/foundations/storage/replication-syncoid/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/backup-disaster-recovery/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/foundations/storage/cloud-backup/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/backup-disaster-recovery/three-layer-strategy/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/operations/iac/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/backup-disaster-recovery/dr-host/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/operations/iac/ansible-patterns/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/infrastructure-as-code/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/operations/iac/secrets-management/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/infrastructure-as-code/ansible-patterns/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/operations/iac/pre-commit-linting/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/infrastructure-as-code/secrets-management/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/operations/backup-dr/</loc>
       </url>
       <url>
-        <loc>https://skovens.github.io/homelab-architecture/infrastructure-as-code/pre-commit-linting/</loc>
+        <loc>https://skovens.github.io/homelab-architecture/operations/backup-dr/three-layer-strategy/</loc>
+      </url>
+      <url>
+        <loc>https://skovens.github.io/homelab-architecture/operations/backup-dr/dr-host/</loc>
       </url>
       <url>
         <loc>https://skovens.github.io/homelab-architecture/decisions/</loc>
@@ -143,5 +146,11 @@
       </url>
       <url>
         <loc>https://skovens.github.io/homelab-architecture/decisions/0011-egress-gate-for-rootless-containers/</loc>
+      </url>
+      <url>
+        <loc>https://skovens.github.io/homelab-architecture/decisions/0012-podman-for-rootless-containers/</loc>
+      </url>
+      <url>
+        <loc>https://skovens.github.io/homelab-architecture/decisions/0013-quadlets-over-docker-compose/</loc>
       </url>
 </urlset>
