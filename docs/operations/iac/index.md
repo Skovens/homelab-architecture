@@ -2,8 +2,6 @@
 title: Infrastructure as Code
 ---
 
-# Infrastructure as Code
-
 The homelab is managed by Ansible. Every role, every configuration, every deployment is defined in code.
 
 - [Ansible Patterns](ansible-patterns.md) — roles, tags, group_vars, feature flags

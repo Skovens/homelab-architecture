@@ -34,7 +34,6 @@ nav = [
       { "Forgejo" = "workloads/services/forgejo.md" },
       { "Healthchecks" = "workloads/services/healthchecks.md" },
       { "NFS" = "workloads/services/nfs.md" },
-      { "Toggleable Services" = "workloads/services/toggleable-services.md" },
     ] },
   ] },
   { "Foundations" = [
@@ -110,10 +109,17 @@ toggle.name = "Switch to dark mode"
 [project.markdown_extensions]
 admonition = {}
 pymdownx.details = {}
-pymdownx.superfences = {}
 pymdownx.highlight.anchor_linenums = true
 pymdownx.highlight.line_spans = "__span"
 pymdownx.highlight.pygments_lang_class = true
 pymdownx.inlinehilite = {}
 pymdownx.snippets = {}
 pymdownx.tabbed.alternate_style = true
+
+[project.markdown_extensions.pymdownx.superfences]
+custom_fences = [
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_div_format" },
+]
+
+[[project.extra_javascript]]
+path = "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"

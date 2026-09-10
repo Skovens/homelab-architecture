@@ -2,10 +2,6 @@
 title: Reverse Proxy
 ---
 
----
-title: Reverse Proxy
----
-
 # Reverse Proxy
 
 A dedicated Debian 13 VPS runs Caddy as a reverse proxy. It terminates TLS and routes traffic to services on the home server via the mesh VPN.
