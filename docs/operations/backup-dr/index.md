@@ -12,18 +12,8 @@ We follow a tiered approach to redundancy, moving from high-frequency, low-laten
 
 ```mermaid
 graph TD
-    subgraph "Site A (Home)"
-        A[Primary Services] -->|ZFS Snapshots| B[Local Storage]
-    end
-
-    subgraph "Site B (Remote)"
-        B -->|Syncoid Replication| C[DR Host - FreeBSD]
-    end
-
-    subgraph "Site C (Cloud)"
-        C -->|Rclone Sync| D[pCloud]
-        B -->|Rclone Sync| D
-    end
+    D[pCloud] -->|Rclone Sync \(one-way\)| B[Homeserver - ZFS]
+    B -->|Syncoid Replication \(one-way\)| C[DR Host - Rockpro]
 ```
 
 ## Core Components
