@@ -2641,8 +2641,8 @@
 <h2 id="the-strategy">The Strategy</h2>
 <p>We follow a tiered approach to redundancy, moving from high-frequency, low-latency protection to low-frequency, high-latency catastrophic recovery.</p>
 <pre class="mermaid"><code>graph TD
-    D[pCloud] --&gt;|Rclone Sync one-way| B[Homeserver - ZFS]
-    B --&gt;|Syncoid Replication one-way| C[DR Host - Rockpro]</code></pre>
+    B[Homeserver - ZFS] --&gt;|Rclone Pull one-way| D[pCloud]
+    C[DR Host - Rockpro] --&gt;|Syncoid Pull one-way| B[Homeserver - ZFS]</code></pre>
 <h2 id="core-components">Core Components</h2>
 <ul>
 <li><a href="three-layer-strategy/">Three-Layer Strategy</a> — The philosophy of tiered redundancy.</li>
