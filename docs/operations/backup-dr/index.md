@@ -12,8 +12,8 @@ We follow a tiered approach to redundancy, moving from high-frequency, low-laten
 
 ```mermaid
 graph TD
-    D[pCloud] -->|Rclone Sync one-way| B[Homeserver - ZFS]
-    B -->|Syncoid Replication one-way| C[DR Host - Rockpro]
+    B[Homeserver - ZFS] -->|Rclone Pull one-way| D[pCloud]
+    C[DR Host - Rockpro] -->|Syncoid Pull one-way| B[Homeserver - ZFS]
 ```
 
 ## Core Components
