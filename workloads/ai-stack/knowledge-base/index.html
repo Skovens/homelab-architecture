@@ -2642,7 +2642,13 @@
 <h1 id="knowledge-base">Knowledge Base</h1>
 <p>oikb syncs external sources into Open WebUI Knowledge Bases for RAG (Retrieval-Augmented Generation). Currently it syncs the Obsidian vault.</p>
 <h2 id="how">How</h2>
-<p>oikb runs on port 8084 and pulls from a local directory. The Obsidian vault is a git repository cloned to the host, with an hourly git pull keeping it current.</p>
+<p>oikb runs on port 8084 and syncs the Obsidian vault from a local git clone. The <code>forgejo-vault-sync</code> systemd service keeps the clone current with bidirectional sync:</p>
+<ol>
+<li><strong>Pull</strong> remote changes from Forgejo (<code>git pull --rebase --autostash</code>)</li>
+<li><strong>Commit</strong> any AI-authored vault-mcp writes (author: <code>open-webui-ai</code>)</li>
+<li><strong>Push</strong> back to Forgejo with retry on rejection</li>
+<li><strong>Trigger</strong> oikb KB re-index only when HEAD moves (avoids re-upload loop)</li>
+</ol>
 <p>File type filtering restricts sync to docling-supported formats:</p>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">oikb_docling_filter</span><span class="p">:</span><span class="w"> </span><span class="nl">&amp;oikb_docling_filter</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">include_extensions</span><span class="p">:</span>
@@ -2658,10 +2664,6 @@
 <p>The YAML anchor (<code>&amp;oikb_docling_filter</code>) is shared across all sources — adding a new source automatically inherits the filter.</p>
 <h2 id="why">Why</h2>
 <p>The file type filter restricts sync to docling-supported formats. Without it, unsupported files would trigger conversion failures on every sync cycle.</p>
-<div class="admonition note">
-<p class="admonition-title">Forgejo connector pending</p>
-<p>A Forgejo connector for oikb is not yet available (oikb PR #12). When it lands, the vault will sync directly from Forgejo instead of a local git clone.</p>
-</div>
 
 
 
