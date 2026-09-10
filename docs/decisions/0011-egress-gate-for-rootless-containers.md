@@ -12,13 +12,13 @@ Accepted
 
 Rootless Podman's default network mode on this server is **pasta**. At unit start pasta snapshots the host's addressing, routes and DNS configuration (`--config-net`) and never refreshes it while running.
 
-Incident 2026-08-24: boot at 15:02:33, containers started 15:02:50–52 (~17 s after boot). At that moment LAN/DNS had not settled, so every pasta instance snapshotted an unsettled network. Consequences for the rest of the day:
+A boot-order race condition occurs when containers start before the host's LAN/DNS has settled. In these cases, every pasta instance snapshots an unsettled network. Consequences include:
 
-- Host egress worked; **all container egress failed instantly** (raw-IP connect refused, DNS dead).
-- OpenHands Agent Canvas could not reach its hosted MCP endpoint — "MCP tool listing timed out after 30 seconds" and "Could not reach the server".
-- HomeAssistant lost weather data — same root cause.
+- Host egress works, but **all container egress fails instantly** (raw-IP connect refused, DNS dead).
+- Services like OpenHands Agent Canvas cannot reach hosted MCP endpoints.
+- External integrations (e.g., weather data) fail.
 
-Restarting the affected user services forced fresh snapshots and fixed everything immediately. The repo history confirmed no networking misconfiguration — this is a pure boot-order race, and it recurs on any reboot where networking takes longer than ~15–20 s to settle.
+Restarting the affected user services forces fresh snapshots and fixes the issue. This race condition recurs on any reboot where networking takes longer than ~15–20 seconds to settle.
 
 ## Decision
 
