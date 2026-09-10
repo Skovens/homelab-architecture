@@ -2640,7 +2640,7 @@
 <p>Data integrity is non-negotiable. This section outlines the multi-layered strategy used to protect the homelab against everything from accidental <code>rm -rf</code> to total site-wide failure.</p>
 <h2 id="the-strategy">The Strategy</h2>
 <p>We follow a tiered approach to redundancy, moving from high-frequency, low-latency protection to low-frequency, high-latency catastrophic recovery.</p>
-<div class="mermaid">graph TD
+<pre class="mermaid"><code>graph TD
     subgraph "Site A (Home)"
         A[Primary Services] --&gt;|ZFS Snapshots| B[Local Storage]
     end
@@ -2652,7 +2652,7 @@
     subgraph "Site C (Cloud)"
         C --&gt;|Rclone Sync| D[pCloud]
         B --&gt;|Rclone Sync| D
-    end</div>
+    end</code></pre>
 <h2 id="core-components">Core Components</h2>
 <ul>
 <li><a href="three-layer-strategy/">Three-Layer Strategy</a> — The philosophy of tiered redundancy.</li>
@@ -2722,8 +2722,6 @@
     
     
       <script src="../../assets/javascripts/bundle.88ee1349.min.js"></script>
-      
-        <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
       
     
   </body>
