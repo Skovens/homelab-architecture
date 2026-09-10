@@ -118,8 +118,7 @@ pymdownx.tabbed.alternate_style = true
 
 [project.markdown_extensions.pymdownx.superfences]
 custom_fences = [
-  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_div_format" },
+  { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
 ]
 
-[[project.extra_javascript]]
-path = "https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"
+
